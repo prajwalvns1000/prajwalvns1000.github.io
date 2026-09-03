@@ -128,15 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
             location: 'Remote',
             technologies: 'Arduino Uno, LM35 Sensor, Sensor Interfacing, Telemetry',
             description: 'Developed digital temperature monitoring solutions, calibrated analog sensors, and implemented serial communication protocols.'
-        },
-        {
-            id: 'exp-3',
-            company: 'Jubilant Biosys Limited',
-            role: 'Instrumentation Engineering Intern',
-            dateRange: '2026',
-            location: 'Mysuru, Karnataka',
-            technologies: 'Industrial Automation, Sensor Calibration, Process Control',
-            description: 'Hands-on practical training in industrial sensor calibration, telemetry nodes, and plant instrumentation maintenance.'
         }
     ];
 
