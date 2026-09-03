@@ -56,8 +56,7 @@ Open a terminal in the project directory (`D:\profile`) and run:
 npm run wordpress
 ```
 - **WordPress Admin**: [http://localhost:8000/wp-admin](http://localhost:8000/wp-admin)
-- **Admin Username**: `admin`
-- **Admin Password**: `password`
+The `wordpress` command starts WordPress Playground without opening a browser login. Use `npm run wordpress:admin` when you need the admin dashboard and create or use the Playground account shown there.
 - **REST API Endpoints**:
   - `http://localhost:8000/wp-json/wp/v2/projects`
   - `http://localhost:8000/wp-json/wp/v2/experience`
@@ -136,4 +135,4 @@ The custom plugin `portfolio-cms` is standard and portable:
 
 - **CORS Handling**: The plugin explicitly hooks into `rest_api_init` and `rest_pre_serve_request` to send `Access-Control-Allow-Origin: *` and handle HTTP `OPTIONS` preflight requests cleanly without modifying server config files.
 - **Security**: The public frontend only accesses public read endpoints (`GET /wp/v2/projects` and `GET /wp/v2/experience`). No WordPress passwords or tokens are stored in client-side code.
-- **Graceful Fallback**: If WordPress is temporarily stopped or unreachable, the frontend seamlessly displays the authentic offline profile data without breaking the page or showing technical errors to visitors.
+- **Graceful Fallback**: If WordPress is temporarily stopped or unreachable, the frontend displays the existing offline profile data without breaking the page or exposing technical errors to visitors. The deployed HTTPS frontend does not make an insecure CMS request; configure a public HTTPS WordPress API URL in `js/config.js` if you deploy the CMS.
