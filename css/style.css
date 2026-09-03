@@ -826,6 +826,44 @@ p.paragraph-large {
     font-size: 0.85rem;
 }
 
+.flow-diagram-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    min-height: 360px;
+    text-align: center;
+}
+
+.flow-step {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.flow-step:last-child {
+    margin-top: -2px;
+}
+
+.step-lbl {
+    min-width: 230px;
+    padding: 13px 20px;
+    color: var(--accent);
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.step-lbl small {
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+}
+
+.step-arr {
+    color: var(--accent);
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
 .flow-step {
     display: flex;
     align-items: center;
@@ -1949,8 +1987,11 @@ body {
 .achievements-grid,
 .activities-grid {
     gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
+}
+
+.skills-grid {
+    background: transparent;
+    border: 0;
 }
 
 .skill-card,
@@ -1960,6 +2001,10 @@ body {
 .languages-card {
     background: #160b0c;
     border: 0;
+}
+
+.skills-grid .skill-card {
+    border: 1px solid var(--border);
 }
 
 .skill-card--removed {
