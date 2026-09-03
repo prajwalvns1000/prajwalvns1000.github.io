@@ -145,6 +145,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const grid = document.getElementById('projects-grid');
         if (!grid) return;
 
+        if (!CONFIG.WORDPRESS_API_URL) {
+            renderProjects(FALLBACK_PROJECTS, false);
+            return;
+        }
+
         const apiUrl = `${CONFIG.WORDPRESS_API_URL}${CONFIG.PROJECTS_ENDPOINT}?per_page=100&_embed=1`;
 
         try {
@@ -276,6 +281,11 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadExperience() {
         const timeline = document.getElementById('experience-timeline');
         if (!timeline) return;
+
+        if (!CONFIG.WORDPRESS_API_URL) {
+            renderExperience(FALLBACK_EXPERIENCE, false);
+            return;
+        }
 
         const apiUrl = `${CONFIG.WORDPRESS_API_URL}${CONFIG.EXPERIENCE_ENDPOINT}?per_page=100&_embed=1`;
 

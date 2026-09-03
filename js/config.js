@@ -6,10 +6,11 @@
  * e.g., "http://portfolio.local/wp-json/wp/v2" for LocalWP or "http://localhost/wordpress/wp-json/wp/v2" for XAMPP.
  */
 const DEFAULT_WP_HOST = (typeof window !== 'undefined' && window.location.hostname) ? window.location.hostname : 'localhost';
+const IS_LOCAL_FRONTEND = ['localhost', '127.0.0.1'].includes(DEFAULT_WP_HOST);
 
 const CONFIG = {
     // Configurable WordPress REST API root endpoint
-    WORDPRESS_API_URL: `http://${DEFAULT_WP_HOST}:8000/wp-json/wp/v2`,
+    WORDPRESS_API_URL: IS_LOCAL_FRONTEND ? `http://${DEFAULT_WP_HOST}:8000/wp-json/wp/v2` : '',
 
     // REST API Sub-Endpoints
     PROJECTS_ENDPOINT: "/projects",
