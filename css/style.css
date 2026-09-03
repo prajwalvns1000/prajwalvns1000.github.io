@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 /* ==========================================================================
    CSS Custom Properties & Reset
    ========================================================================== */
@@ -1311,4 +1313,319 @@ p.paragraph-large {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
+}
+
+/* Reference-inspired editorial skin */
+:root {
+    --bg-primary: #101312;
+    --bg-secondary: #171b19;
+    --bg-tertiary: #202722;
+    --accent: #d8ff3e;
+    --accent-glow: rgba(216, 255, 62, 0.14);
+    --accent-hover: #edff91;
+    --text-primary: #f2f4e9;
+    --text-secondary: #a6aea0;
+    --text-muted: #697269;
+    --border: #303931;
+    --font-sans: 'Space Grotesk', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+    --container-max-width: 1240px;
+    --header-height: 76px;
+}
+
+html {
+    background: var(--bg-primary);
+    font-size: 16px;
+}
+
+body {
+    background: linear-gradient(120deg, #101312 0%, #121713 50%, #0d100f 100%);
+    background-attachment: fixed;
+}
+
+.navbar {
+    background: rgba(16, 19, 18, 0.92);
+    border-bottom-color: var(--border);
+}
+
+.nav-container,
+.hero-container,
+.section-container,
+.footer-container {
+    max-width: var(--container-max-width);
+}
+
+.logo {
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.nav-menu ul {
+    gap: 19px;
+}
+
+.nav-link {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.hero-section {
+    min-height: 760px;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-section::before {
+    background-size: 64px 64px;
+    background-image: linear-gradient(to right, rgba(216, 255, 62, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(216, 255, 62, 0.045) 1px, transparent 1px);
+}
+
+.hero-container {
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+.hero-sub,
+.project-meta,
+.timeline-date,
+.timeline-role,
+.activity-subtitle,
+.section-subtitle,
+.meta-label,
+.profile-lbl {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.hero-sub {
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    max-width: 850px;
+    font-size: clamp(4rem, 10vw, 8.8rem);
+    line-height: 0.92;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+.hero-tagline {
+    max-width: 650px;
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-desc {
+    max-width: 600px;
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.hero-cta {
+    margin-top: 36px;
+}
+
+.btn {
+    border-radius: 0;
+    padding: 13px 19px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.section-container {
+    padding-top: 118px;
+    padding-bottom: 118px;
+}
+
+.section-title {
+    font-size: clamp(2.1rem, 5vw, 4.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+    margin-bottom: 38px;
+}
+
+.section-title::before {
+    content: '// ';
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.35em;
+    letter-spacing: 0;
+    vertical-align: middle;
+}
+
+.section-title::after {
+    display: none;
+}
+
+.section-subtitle {
+    font-size: 0.68rem;
+    color: var(--accent);
+    margin-bottom: 34px;
+}
+
+.about-section,
+.projects-section,
+.achievements-section,
+.contact-section {
+    background: transparent;
+}
+
+.about-section,
+.skills-section,
+.projects-section,
+.experience-section,
+.education-section,
+.achievements-section,
+.activities-section,
+.architecture-section,
+.contact-section {
+    border-bottom: 1px solid var(--border);
+}
+
+.about-info {
+    max-width: 780px;
+}
+
+.about-info p {
+    text-align: left;
+}
+
+.paragraph-large {
+    font-size: 1.45rem !important;
+    line-height: 1.4 !important;
+}
+
+.skill-card,
+.project-card,
+.timeline-content,
+.achievement-card,
+.activity-card,
+.languages-card,
+.arch-card,
+.profile-card {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.skill-card {
+    background: rgba(23, 27, 25, 0.74);
+    padding: 26px;
+}
+
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 0 rgba(216, 255, 62, 0.08);
+}
+
+.skill-header {
+    border-bottom-color: var(--border);
+}
+
+.skill-title,
+.project-title,
+.timeline-title,
+.achievement-title,
+.activity-title {
+    letter-spacing: -0.03em;
+}
+
+.skill-list li,
+.tech-tag,
+.lang-tag,
+.flow-diagram-container,
+.step-lbl,
+.project-meta,
+.timeline-date,
+.timeline-role,
+.timeline-location,
+.profile-val,
+.footer-meta {
+    font-family: var(--font-mono);
+}
+
+.project-card {
+    background: #171b19;
+    border-color: var(--border);
+}
+
+.project-content {
+    padding: 28px;
+}
+
+.project-title {
+    font-size: 1.65rem;
+}
+
+.tech-tag,
+.lang-tag,
+.step-lbl {
+    border-radius: 0;
+    background: transparent;
+    border-color: #3d493c;
+}
+
+.timeline {
+    max-width: none;
+}
+
+.timeline-content {
+    background: rgba(23, 27, 25, 0.74);
+    border-left: 3px solid var(--accent);
+}
+
+.contact-link {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+}
+
+.footer {
+    background: #0d100f;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 700px;
+    }
+
+    .hero-container {
+        padding-top: 100px;
+    }
+
+    .hero-title {
+        font-size: clamp(3.5rem, 18vw, 6rem);
+    }
+
+    .section-container {
+        padding-top: 78px;
+        padding-bottom: 78px;
+    }
+
+    .paragraph-large {
+        font-size: 1.2rem !important;
+    }
+
+    .footer-container {
+        display: block;
+    }
 }
