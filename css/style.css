@@ -1661,6 +1661,7 @@ body {
     color: var(--accent);
     font-family: Georgia, serif;
     font-size: 1.05rem;
+    white-space: nowrap;
 }
 
 .logo-accent {
@@ -2071,6 +2072,15 @@ body {
     .hero-container {
         min-height: 840px;
         padding-top: 105px;
+        align-items: start;
+    }
+
+    .hero-copy {
+        padding-top: 20px;
+    }
+
+    .hero-visual {
+        margin-top: 68px;
     }
 
     .hero-title {
@@ -2105,5 +2115,22 @@ body {
     .section-container {
         padding-top: 92px;
         padding-bottom: 92px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+    .nav-menu ul {
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 0.64rem;
+    }
+
+    .nav-container,
+    .hero-container,
+    .section-container {
+        padding-left: 22px;
+        padding-right: 22px;
     }
 }
