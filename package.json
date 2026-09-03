@@ -1,0 +1,14 @@
+{
+  "name": "prajwal-portfolio-headless-cms",
+  "version": "1.0.0",
+  "description": "Headless WordPress CMS and Decoupled Frontend Portfolio",
+  "scripts": {
+    "wordpress": "npx @wp-playground/cli start --no-login --path=./wp-content/plugins/portfolio-cms --port=8000 --skip-browser",
+    "wordpress:admin": "npx @wp-playground/cli start --path=./wp-content/plugins/portfolio-cms --port=8000",
+    "wordpress:reset": "npx @wp-playground/cli start --no-login --path=./wp-content/plugins/portfolio-cms --port=8000 --reset",
+    "frontend": "npx serve -l 3000 -s .",
+    "dev": "npx concurrently \"npm run wordpress\" \"npm run frontend\""
+  },
+  "author": "Prajwal N",
+  "license": "ISC"
+}
