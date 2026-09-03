@@ -1614,6 +1614,7 @@ body {
 
     .hero-title {
         font-size: clamp(3.5rem, 18vw, 6rem);
+        white-space: normal;
     }
 
     .section-container {
@@ -1726,6 +1727,7 @@ body {
     line-height: 0.92;
     letter-spacing: -0.075em;
     text-transform: none;
+    white-space: nowrap;
     margin-bottom: 35px;
 }
 
@@ -1839,6 +1841,19 @@ body {
     margin-left: 8px;
 }
 
+.hero-photo {
+    position: relative;
+    z-index: 1;
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    object-position: center top;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    background: #f3f3f3;
+    box-shadow: 0 0 0 12px rgba(226, 189, 88, 0.04), 0 0 0 22px rgba(226, 189, 88, 0.09);
+}
+
 .hero-orbit {
     position: absolute;
     width: 350px;
@@ -1946,6 +1961,10 @@ body {
     border: 0;
 }
 
+.skill-card--removed {
+    display: none;
+}
+
 .project-card {
     min-height: 100%;
 }
@@ -2019,6 +2038,11 @@ body {
         width: 205px;
         height: 205px;
         font-size: 3.1rem;
+    }
+
+    .hero-photo {
+        width: 205px;
+        height: 205px;
     }
 
     .hero-orbit {
